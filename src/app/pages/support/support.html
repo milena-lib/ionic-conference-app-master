@@ -1,0 +1,131 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Support</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="support-logo">
+    <img src="assets/img/appicon.svg" alt="Ionic Logo">
+  </div>
+
+  <form #submitForm="ngForm" novalidate (ngSubmit)="submit(submitForm)">
+    <ion-list lines="none">
+      <ion-item>
+        <ion-label position="stacked" color="primary">Enter your support message below</ion-label>
+        <ion-textarea [(ngModel)]="supportMessage" name="supportQuestion" #supportQuestion="ngModel" rows="6" required></ion-textarea>
+      </ion-item>
+    </ion-list>
+
+    <ion-text color="danger">
+      <p [hidden]="supportQuestion.valid || submitted === false" class="ion-padding-start">
+        Support message is required
+      </p>
+    </ion-text>
+
+    <!-- <ion-tab-bar>
+      <ion-tab-button tab="schedule">
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Schedule 1</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="schedule">
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Schedule 2</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="schedule">
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Schedule 3</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="schedule">
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Schedule 4</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="schedule">
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Schedule 5</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="schedule">
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Schedule 6</ion-label>
+      </ion-tab-button>
+  </ion-tab-bar> -->
+
+  <div class="container">
+    <div class="btn" *ngFor="let p of supportPages; let i = index">
+      <!-- <div [routerLink]="p.url" routerLinkActive="selected" routerDirection="root" detail="false">
+        <ion-icon slot="start" [name]="p.icon + '-outline'"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </div> -->
+   </div>
+  </div>
+
+  <ion-button>
+    <div>
+      <ion-icon  ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+    </div>
+    
+    <br />
+    <div>
+      Icon
+    </div>
+  </ion-button>
+
+<!--   
+  <ion-icon name="calendar"></ion-icon>
+  <ion-icon name="calendar"></ion-icon>
+  <ion-icon name="calendar"></ion-icon>
+
+  <button color="light">button_green</button>  
+  <button class='ion-color-favorite'>button_red</button> 
+  <button class='button_blue'>button_blue</button>  
+  <button ion-button class='button_yellow'>button_yellow</button> 
+  <button ion-button class='button_pink'>button_pink</button>  
+  <button ion-button class='button_purple'>button_purple</button> -->
+
+
+    <!-- <ion-button color="light"><ion-icon name="star"></ion-icon></ion-button> 
+    <ion-button color="light"><ion-icon name="star"></ion-icon></ion-button>
+    <ion-button color="light"><ion-icon name="star"></ion-icon></ion-button>
+    <ion-button color="light"><ion-icon name="star"></ion-icon></ion-button>
+    <ion-button color="light"><ion-icon name="star"></ion-icon></ion-button>
+    <ion-button color="light"><ion-icon name="star"></ion-icon></ion-button>  -->
+
+
+    <!-- <ion-tabs>
+
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="schedule">
+          <ion-icon name="calendar"></ion-icon>
+          <ion-label>Schedule</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="speakers">
+          <ion-icon name="people"></ion-icon>
+          <ion-label>Speakers</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="map">
+          <ion-icon name="location"></ion-icon>
+          <ion-label>Map</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="about">
+          <ion-icon name="information-circle"></ion-icon>
+          <ion-label>About</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    
+    </ion-tabs> -->
+    
+
+    <div class="ion-padding">
+      <ion-button expand="block" type="submit">Submit</ion-button>
+    </div>
+  </form>
+</ion-content>

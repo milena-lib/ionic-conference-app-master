@@ -1,0 +1,37 @@
+.my-custom-class .alert-wrapper {
+    background: #e5e5e5;
+    direction: rtl;
+}
+
+.my-custom-class .alert-wrapper i {
+    font-size: 10px;
+}
+
+.my-custom-class .btn-alert {
+    background-color: #2dd5c4;
+    color: black;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: arial;
+    border: 2px solid black;
+}
+
+.my-custom-class .alert-button.sc-ion-alert-md {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.my-custom-class .alert-message {
+    color: black;
+}
+
+.my-custom-class .alert-message i {
+    color: red;
+}
+
+/*****************************/
+
+// .fancy-button {
+//     background: var(--ion-color-step-150, #36454f);
+// }
+
